@@ -43,6 +43,16 @@ struct Response: View {
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
             
+            if let data = data {
+                if let decodedResponse = try? JSONDecoder().decode(ResponseRepresentable.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.results = decodedResponse.results
+                    }
+                    
+                    return
+                }
+            }
+            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
         }.resume()
     }
 }
