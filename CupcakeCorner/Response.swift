@@ -20,6 +20,8 @@ struct Result: Codable {
 
 
 struct Response: View {
+    @State var results = [Result]()
+    
     var body: some View {
         Text("Hello, World!")
     }
