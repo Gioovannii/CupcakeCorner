@@ -23,7 +23,27 @@ struct Response: View {
     @State var results = [Result]()
     
     var body: some View {
-        Text("Hello, World!")
+        List(results, id: \.trackId) { item in
+            VStack(alignment: .leading) {
+                Text("\(item.trackName)")
+                    .font(.headline)
+                
+                Text(item.collectionName)
+            }
+        }
+        .onAppear(perform: loadData)
+    }
+    
+    func loadData() {
+        guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else {
+            print("Invalid URL")
+            return
+        }
+        
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            
+        }.resume()
     }
 }
 
