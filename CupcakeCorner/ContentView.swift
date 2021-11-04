@@ -54,7 +54,7 @@ struct ContentView: View {
                     .disabled(order.order)
                 }
             }
-            .navigationBarTitle("Order form ")
+            .navigationBarTitle("Cupcake Corner")
         }
     }
 }
