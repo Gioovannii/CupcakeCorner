@@ -45,8 +45,6 @@ struct ContentView: View {
                     }
                 }
                 
-
-
                 Section {
                     Button("Order") {
                         // Code to order
