@@ -29,6 +29,25 @@ struct ContentView: View {
                 }
                 
                 Section {
+                    Toggle(isOn: $order.specialRequestEnabled.animation()) {
+                        Text("Any special requests ? ")
+                    }
+                    
+                    if order.specialRequestEnabled {
+                        Toggle(isOn: $order.extraFrosting) {
+                            Text("Add extra frosting")
+                        }
+                        
+                        Toggle(isOn: $order.addSprinkles) {
+                            Text("Add extra sprinkles")
+                        }
+                        
+                    }
+                }
+                
+
+
+                Section {
                     Button("Order") {
                         // Code to order
                     }
