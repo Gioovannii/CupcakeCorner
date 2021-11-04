@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct AdressView: View {
+    @ObservedObject var order: Order
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
     }
 }
 
 struct AdressView_Previews: PreviewProvider {
     static var previews: some View {
-        AdressView()
+        AdressView(order: Order())
     }
 }
