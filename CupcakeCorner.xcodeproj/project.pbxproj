@@ -15,6 +15,7 @@
 		7BA8E2392732397700CE5388 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8E2382732397700CE5388 /* User.swift */; };
 		7BA8E23B27325F3600CE5388 /* FormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8E23A27325F3600CE5388 /* FormsView.swift */; };
 		7BBA109C2733767300230A74 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA109B2733767300230A74 /* Order.swift */; };
+		7BBA109E273386F500230A74 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA109D273386F500230A74 /* AdressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		7BA8E2382732397700CE5388 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7BA8E23A27325F3600CE5388 /* FormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsView.swift; sourceTree = "<group>"; };
 		7BBA109B2733767300230A74 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		7BBA109D273386F500230A74 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7BBA109A2733762700230A74 /* Lecons */,
 				7BA8E22A2732327700CE5388 /* ContentView.swift */,
 				7BBA109B2733767300230A74 /* Order.swift */,
+				7BBA109D273386F500230A74 /* AdressView.swift */,
 				7BA8E22C2732327800CE5388 /* Assets.xcassets */,
 				7BA8E22E2732327800CE5388 /* Preview Content */,
 			);
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BBA109C2733767300230A74 /* Order.swift in Sources */,
+				7BBA109E273386F500230A74 /* AdressView.swift in Sources */,
 				7BA8E23B27325F3600CE5388 /* FormsView.swift in Sources */,
 				7BA8E2392732397700CE5388 /* User.swift in Sources */,
 				7BA8E22B2732327700CE5388 /* ContentView.swift in Sources */,
