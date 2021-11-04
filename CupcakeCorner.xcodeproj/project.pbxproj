@@ -13,6 +13,7 @@
 		7BA8E2302732327800CE5388 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA8E22F2732327800CE5388 /* Preview Assets.xcassets */; };
 		7BA8E2372732394800CE5388 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8E2362732394800CE5388 /* Response.swift */; };
 		7BA8E2392732397700CE5388 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8E2382732397700CE5388 /* User.swift */; };
+		7BA8E23B27325F3600CE5388 /* FormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8E23A27325F3600CE5388 /* FormsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		7BA8E22F2732327800CE5388 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BA8E2362732394800CE5388 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		7BA8E2382732397700CE5388 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7BA8E23A27325F3600CE5388 /* FormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				7BA8E2282732327700CE5388 /* CupcakeCornerApp.swift */,
+				7BBA109A2733762700230A74 /* Lecons */,
 				7BA8E22A2732327700CE5388 /* ContentView.swift */,
-				7BA8E2362732394800CE5388 /* Response.swift */,
-				7BA8E2382732397700CE5388 /* User.swift */,
 				7BA8E22C2732327800CE5388 /* Assets.xcassets */,
 				7BA8E22E2732327800CE5388 /* Preview Content */,
 			);
@@ -71,6 +72,16 @@
 				7BA8E22F2732327800CE5388 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7BBA109A2733762700230A74 /* Lecons */ = {
+			isa = PBXGroup;
+			children = (
+				7BA8E2362732394800CE5388 /* Response.swift */,
+				7BA8E2382732397700CE5388 /* User.swift */,
+				7BA8E23A27325F3600CE5388 /* FormsView.swift */,
+			);
+			path = Lecons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA8E23B27325F3600CE5388 /* FormsView.swift in Sources */,
 				7BA8E2392732397700CE5388 /* User.swift in Sources */,
 				7BA8E22B2732327700CE5388 /* ContentView.swift in Sources */,
 				7BA8E2372732394800CE5388 /* Response.swift in Sources */,
