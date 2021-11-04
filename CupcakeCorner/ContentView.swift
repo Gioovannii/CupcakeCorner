@@ -46,8 +46,9 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Button("Order") {
-                        // Code to order
+                    NavigationLink(destination: AdressView(order: order)) {
+                        Text("Delivery Details")
+                            .foregroundColor(Color.accentColor)
                     }
                     .disabled(order.order)
                 }
