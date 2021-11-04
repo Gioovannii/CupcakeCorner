@@ -50,7 +50,7 @@ struct ContentView: View {
                         Text("Delivery Details")
                             .foregroundColor(Color.accentColor)
                     }
-                    .disabled(order.order)
+                
                 }
             }
             .navigationBarTitle("Cupcake Corner")
