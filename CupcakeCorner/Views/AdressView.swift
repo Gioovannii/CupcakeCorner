@@ -11,7 +11,15 @@ struct AdressView: View {
     @ObservedObject var order: Order
     
     var body: some View {
-        Text("Hello, World!")
+        Form {
+            Section {
+                TextField("Name", text: $order.name)
+                TextField("Street Adress", text: $order.streetAdress)
+                TextField("City", text: $order.city)
+                TextField("Zip", text: $order.zip)
+            }
+            
+            
     }
 }
 
