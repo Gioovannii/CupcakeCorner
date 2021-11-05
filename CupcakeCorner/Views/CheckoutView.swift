@@ -39,7 +39,13 @@ struct CheckoutView: View {
         }
     }
     
-    
+    func placeOrder () {
+        guard let encoded = try? JSONEncoder().encode(order) else {
+            print("Failed to encode order")
+            return
+        }
+        
+      
     }
 }
 
