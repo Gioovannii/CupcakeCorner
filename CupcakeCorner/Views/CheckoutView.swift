@@ -15,6 +15,23 @@ struct CheckoutView: View {
     
     var body: some View {
         
+        GeometryReader { geo in
+            ScrollView {
+                VStack {
+                    Image("cupcakes")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geo.size.width)
+                    Text("Your total is  : \(order.cost, specifier: "%.2f") $")
+                        .font(.title)
+                    
+                    Button("Place order") {
+                        self.placeOrder()
+                    }
+                    .padding()
+                }
+            }
+        }
         
     }
 }
