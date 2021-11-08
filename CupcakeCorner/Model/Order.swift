@@ -38,6 +38,14 @@ class Order: ObservableObject, Codable {
             return false
         }
         
+        if name.trimmingCharacters(in: .whitespaces) != name || streetAdress.trimmingCharacters(in: .whitespaces) != streetAdress ||
+            city.trimmingCharacters(in: .whitespaces) != city ||
+            zip.trimmingCharacters(in: .whitespaces) != zip {
+            print("Name \(name) Street \(streetAdress) city \(city) zip \(zip)")
+  
+            return false
+        }
+        
         return true
     }
     
