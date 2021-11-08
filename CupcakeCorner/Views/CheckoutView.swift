@@ -40,8 +40,11 @@ struct CheckoutView: View {
         .alert(isPresented: $showingConfirmation) {
             Alert(title: Text("Thank you"), message: Text(confirmationMessage), dismissButton: .default(Text("Ok")))
         }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Oups"), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
+        }
     }
-    
+
     func placeOrder () {
         guard let encoded = try? JSONEncoder().encode(order) else {
             print("Failed to encode order")
