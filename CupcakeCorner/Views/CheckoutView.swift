@@ -10,7 +10,10 @@ import SwiftUI
 struct CheckoutView: View {
     @ObservedObject var order: Order
     @State private var confirmationMessage = ""
+    @State private var alertMessage = ""
     @State private var showingConfirmation = false
+    @State private var showingAlert = false
+
     
     
     var body: some View {
