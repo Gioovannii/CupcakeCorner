@@ -59,7 +59,10 @@ struct CheckoutView: View {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
-                print("No data in response : \(error?.localizedDescription ?? "Unknown error")")
+                let errorMessage = error?.localizedDescription ?? "Unknown error"
+                print("No data in response : \(errorMessage)")
+                self.showingAlert = true
+                alertMessage = errorMessage
                 return
             }
             
