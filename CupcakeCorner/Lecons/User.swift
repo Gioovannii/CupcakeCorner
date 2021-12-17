@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class UserRepresentable: Codable, ObservableObject {
+class User: Codable, ObservableObject {
     enum CodingKeys: CodingKey {
         case name
     }
@@ -25,7 +25,7 @@ class UserRepresentable: Codable, ObservableObject {
     }
 }
 
-struct User: View {
+struct UserView: View {
     var body: some View {
         Text("Hello world")
             .padding()
@@ -34,6 +34,6 @@ struct User: View {
 
 struct User_Previews: PreviewProvider {
     static var previews: some View {
-        User()
+        UserView()
     }
 }

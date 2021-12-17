@@ -17,8 +17,6 @@ struct Result: Codable {
     var collectionName: String
 }
 
-
-
 struct Response: View {
     @State var results = [Result]()
     
@@ -31,34 +29,32 @@ struct Response: View {
                 Text(item.collectionName)
             }
         }
-        .onAppear(perform: loadData)
+        .task {
+            await loadData()
+        }
     }
     
-    func loadData() {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else {
+    func loadData() async {
+        guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=son") else {
             print("Invalid URL")
             return
         }
-        
-        let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { data, response, error in
+
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
             
-            if let data = data {
-                if let decodedResponse = try? JSONDecoder().decode(ResponseRepresentable.self, from: data) {
-                    DispatchQueue.main.async {
-                        self.results = decodedResponse.results
-                    }
-                    
-                    return
-                }
+            if let decodedResponse = try? JSONDecoder().decode(ResponseRepresentable.self, from: data) {
+                results = decodedResponse.results
             }
-            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
-        }.resume()
+        } catch {
+            print("Fetch failed \(error.localizedDescription)")
+        }
     }
 }
 
 struct Response_Previews: PreviewProvider {
     static var previews: some View {
         Response()
+            .preferredColorScheme(.dark)
     }
 }
