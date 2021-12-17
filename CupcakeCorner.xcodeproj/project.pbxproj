@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2F2B2D276C281300A1EA35 /* LoadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F2B2C276C281300A1EA35 /* LoadImageView.swift */; };
 		7BA8E2292732327700CE5388 /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8E2282732327700CE5388 /* CupcakeCornerApp.swift */; };
 		7BA8E22B2732327700CE5388 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8E22A2732327700CE5388 /* ContentView.swift */; };
 		7BA8E22D2732327800CE5388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA8E22C2732327800CE5388 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B2F2B2C276C281300A1EA35 /* LoadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageView.swift; sourceTree = "<group>"; };
 		7BA8E2252732327700CE5388 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA8E2282732327700CE5388 /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		7BA8E22A2732327700CE5388 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,8 +86,9 @@
 		7BBA109A2733762700230A74 /* Lecons */ = {
 			isa = PBXGroup;
 			children = (
-				7BA8E2362732394800CE5388 /* Response.swift */,
 				7BA8E2382732397700CE5388 /* User.swift */,
+				7BA8E2362732394800CE5388 /* Response.swift */,
+				7B2F2B2C276C281300A1EA35 /* LoadImageView.swift */,
 				7BA8E23A27325F3600CE5388 /* FormsView.swift */,
 			);
 			path = Lecons;
@@ -183,6 +186,7 @@
 				7BBA109E273386F500230A74 /* AdressView.swift in Sources */,
 				7BA8E23B27325F3600CE5388 /* FormsView.swift in Sources */,
 				7BA8E2392732397700CE5388 /* User.swift in Sources */,
+				7B2F2B2D276C281300A1EA35 /* LoadImageView.swift in Sources */,
 				7BA8E22B2732327700CE5388 /* ContentView.swift in Sources */,
 				7BA8E2372732394800CE5388 /* Response.swift in Sources */,
 				7BBA10A227338A2400230A74 /* CheckoutView.swift in Sources */,

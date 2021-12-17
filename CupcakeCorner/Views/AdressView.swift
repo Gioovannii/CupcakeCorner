@@ -23,20 +23,26 @@ struct AdressView: View {
             }
             
             Section {
-                NavigationLink(destination: CheckoutView(order: order)) {
+                NavigationLink {
+                    CheckoutView(order: order)
+                } label: {
                     Text("Check out")
                         .foregroundColor(Color.accentColor)
                 }
             }
             .disabled(order.hasValidAdress == false)
-
+            
         }
-        .navigationBarTitle("Delivery details", displayMode : .inline)
+        .navigationTitle("Delivery details")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct AdressView_Previews: PreviewProvider {
     static var previews: some View {
-        AdressView(order: Order())
+        NavigationView {
+            AdressView(order: Order())
+                .preferredColorScheme(.dark)
+        }
     }
 }

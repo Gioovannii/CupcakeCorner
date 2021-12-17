@@ -8,47 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var order = Order()
+    @StateObject var order = Order()
     var body: some View {
         NavigationView {
             Form {
                 Section {
                     Picker("Select your cake type", selection: $order.type) {
-                        ForEach(0..<Order.types.count) {
+                        ForEach(Order.types.indices) {
                             Text(Order.types[$0])
                         }
                     }
                     
-                    Stepper(value: $order.quantity, in: 3...20, step: 1) {
-                        HStack {
-                            Text("How many cupcakes ?")
-                            Spacer()
-                            Text("\(order.quantity)")
-                        }
-                    }
+                    Stepper("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3...20)
                 }
                 
                 Section {
-                    Toggle(isOn: $order.specialRequestEnabled.animation()) {
-                        Text("Any special requests ? ")
-                    }
+                    Toggle("Any special requests?", isOn: $order.specialRequestEnabled.animation())
+                    
                     
                     if order.specialRequestEnabled {
-                        Toggle(isOn: $order.extraFrosting) {
-                            Text("Add extra frosting")
-                        }
+                        Toggle("Add extra frosting", isOn: $order.extraFrosting)
                         
-                        Toggle(isOn: $order.addSprinkles) {
-                            Text("Add extra sprinkles")
-                        }
+                        Toggle("Add extra sprinkles", isOn: $order.addSprinkles)
                         
                     }
                 }
                 
                 Section {
-                    NavigationLink(destination: AdressView(order: order)) {
+                    NavigationLink  {
+                        AdressView(order: order)
+                    } label: {
                         Text("Delivery Details")
-                            .foregroundColor(Color.accentColor)
                     }
                 }
             }
@@ -60,5 +50,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
